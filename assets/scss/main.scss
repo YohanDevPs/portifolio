@@ -1,6 +1,11 @@
-body {
-  background: black;
-  section {
-    color: red;
-  }
-}
+@import "./reset";
+@import "./fonts";
+@import "./typografy";
+
+@import "./sidebar";
+
+@import "./home";
+@import "./about";
+@import "./resume";
+@import "./work";
+@import "./contact";

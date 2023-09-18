@@ -6,12 +6,7 @@
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
 
@@ -114,7 +109,7 @@ main > section.active {
   color: #b6b7ba;
   transition: all 0.3s;
 }
-#sidebar nav ul li span {
+#sidebar nav ul li > span {
   position: absolute;
   white-space: nowrap;
   top: -8px;
@@ -172,7 +167,7 @@ main > section.active {
 }
 
 #contact {
-  background: black;
+  background: #000;
 }
 
 @media (max-width: 768px) {

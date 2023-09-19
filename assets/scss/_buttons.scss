@@ -26,9 +26,9 @@
   }
 
   &:hover {
-    color: white;
+    color: #fff;
 
-    &::before {
+    &:before {
       transform: translate(-50%, -50%) scale(2);
     }
   }

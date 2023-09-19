@@ -23,41 +23,184 @@ p {
   padding: 0;
 }
 
-h1,
-h2,
-h4,
-h5,
-h6 {
-  font-family: "Playfair Display", serif;
+#my_work.blur {
+  filter: blur(2px);
 }
-
-h1 {
-  font-size: 48px;
-  font-weight: 700;
+#my_work .filters {
+  text-align: center;
+  margin-top: 81px;
+  margin-bottom: 55px;
 }
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
+#my_work .filters button {
+  background: transparent;
+  color: #808185;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-bottom: 16px;
 }
-
-h3 {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-p {
-  line-height: 175%;
-}
-
-body {
-  background: #151516;
-  font-family: "Ubuntu", sans-serif;
-}
-
-* {
+#my_work .filters button.active {
   color: #fff;
+  background: #1e1e20;
+  border-radius: 8px;
+}
+#my_work .work-items .item {
+  margin-bottom: 24px;
+}
+#my_work .work-items .item .wrap {
+  position: relative;
+  overflow: hidden;
+}
+#my_work .work-items .item .wrap:hover:before {
+  transform: rotate(0deg);
+}
+#my_work .work-items .item .wrap:hover:after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+#my_work .work-items .item .wrap:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(101, 141, 242, 0.6);
+  border-radius: 8px;
+  z-index: 1;
+  cursor: pointer;
+  transform: rotate(-100deg);
+  transform-origin: top left;
+  transition: all 0.3s;
+}
+#my_work .work-items .item .wrap:after {
+  content: "View";
+  position: absolute;
+  width: 96%;
+  height: 95%;
+  background: rgba(21, 21, 22, 0.8);
+  border-radius: 8px;
+  transform-origin: bottom left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(100deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  letter-spacing: 3px;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#my_work .work-items .item .wrap img {
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal#workModal .modal-dialog {
+  max-width: 863px;
+}
+.modal#workModal .modal-dialog .modal-content {
+  background: #1e1e20;
+  padding: 32px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+  position: static;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .modal-close-button {
+  position: absolute;
+  right: -23px;
+  top: -23px;
+  background: #151516;
+  font-size: 22px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .modal-close-button:hover {
+  background: #0b2c80;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body img {
+  width: 100%;
+  height: 532px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .left {
+  padding-left: 0;
+  padding-right: 32px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .left h2 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .left p {
+  color: #b6b7ba;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right {
+  padding-right: 0;
+  padding-left: 32px;
+  padding-top: 80px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right i {
+  font-size: 18px;
+  margin-right: 2px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right .value {
+  color: #b6b7ba;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right .project-link {
+  margin-top: 32px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right .project-link a,
+.modal#workModal .modal-dialog .modal-content .modal-body .right .project-link i {
+  color: #658df2;
+  text-decoration: none;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right .project-link a:hover {
+  text-decoration: underline;
+}
+
+.btn-custom-blue, .btn-custom-dark {
+  display: inline-block;
+  position: relative;
+  background: #262f48;
+  padding: 10px 52px;
+  text-decoration: none;
+  color: #658df2;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.btn-custom-blue:before, .btn-custom-dark:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #658df2;
+  opacity: 0.3;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+  transition: all 0.3s;
+}
+.btn-custom-blue:hover, .btn-custom-dark:hover {
+  color: #fff;
+}
+.btn-custom-blue:hover:before, .btn-custom-dark:hover:before {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.btn-custom-dark {
+  background: #1e1e20;
 }
 
 .btn-custom-blue, .btn-custom-dark {
@@ -150,6 +293,9 @@ main > section header.custom h2 {
   display: flex;
   flex-direction: column;
   z-index: 10;
+}
+#sidebar.blur {
+  filter: blur(2px);
 }
 #sidebar .toggle-sidebar {
   position: absolute;
@@ -365,10 +511,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 29vh;
-  left: 14vw;
-  animation: meteor 6475ms linear infinite;
-  animation-delay: 70ms;
+  top: 54vh;
+  left: 6vw;
+  animation: meteor 7549ms linear infinite;
+  animation-delay: 4918ms;
 }
 #home .meteor-shower .meteor:nth-child(2) {
   position: absolute;
@@ -376,10 +522,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 34vh;
-  left: 51vw;
-  animation: meteor 5125ms linear infinite;
-  animation-delay: 1191ms;
+  top: 8vh;
+  left: 24vw;
+  animation: meteor 4058ms linear infinite;
+  animation-delay: 598ms;
 }
 #home .meteor-shower .meteor:nth-child(3) {
   position: absolute;
@@ -387,10 +533,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 14vh;
-  left: 28vw;
-  animation: meteor 6614ms linear infinite;
-  animation-delay: 678ms;
+  top: 32vh;
+  left: 69vw;
+  animation: meteor 7362ms linear infinite;
+  animation-delay: 2657ms;
 }
 #home .meteor-shower .meteor:nth-child(4) {
   position: absolute;
@@ -398,10 +544,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 50vh;
-  left: 75vw;
-  animation: meteor 7982ms linear infinite;
-  animation-delay: 3441ms;
+  top: 1vh;
+  left: 16vw;
+  animation: meteor 7193ms linear infinite;
+  animation-delay: 2754ms;
 }
 #home .meteor-shower .meteor:nth-child(5) {
   position: absolute;
@@ -409,10 +555,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 44vh;
-  left: 14vw;
-  animation: meteor 5812ms linear infinite;
-  animation-delay: 3920ms;
+  top: 13vh;
+  left: 16vw;
+  animation: meteor 3675ms linear infinite;
+  animation-delay: 2358ms;
 }
 #home .meteor-shower .meteor:nth-child(6) {
   position: absolute;
@@ -420,10 +566,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 76vh;
-  left: 11vw;
-  animation: meteor 4752ms linear infinite;
-  animation-delay: 1106ms;
+  top: 75vh;
+  left: 10vw;
+  animation: meteor 3678ms linear infinite;
+  animation-delay: 3597ms;
 }
 #home .meteor-shower .meteor:nth-child(7) {
   position: absolute;
@@ -431,10 +577,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 51vh;
-  left: 67vw;
-  animation: meteor 3705ms linear infinite;
-  animation-delay: 2670ms;
+  top: 71vh;
+  left: 43vw;
+  animation: meteor 7501ms linear infinite;
+  animation-delay: 4257ms;
 }
 #home .meteor-shower .meteor:nth-child(8) {
   position: absolute;
@@ -442,10 +588,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 64vh;
-  left: 7vw;
-  animation: meteor 5873ms linear infinite;
-  animation-delay: 4850ms;
+  top: 18vh;
+  left: 20vw;
+  animation: meteor 4213ms linear infinite;
+  animation-delay: 1136ms;
 }
 #home .meteor-shower .meteor:nth-child(9) {
   position: absolute;
@@ -453,10 +599,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 19vh;
-  left: 49vw;
-  animation: meteor 7179ms linear infinite;
-  animation-delay: 2934ms;
+  top: 6vh;
+  left: 43vw;
+  animation: meteor 7264ms linear infinite;
+  animation-delay: 3772ms;
 }
 #home .meteor-shower .meteor:nth-child(10) {
   position: absolute;
@@ -464,10 +610,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 63vh;
-  left: 49vw;
-  animation: meteor 6090ms linear infinite;
-  animation-delay: 54ms;
+  top: 33vh;
+  left: 39vw;
+  animation: meteor 6784ms linear infinite;
+  animation-delay: 3926ms;
 }
 #home .meteor-shower .meteor:nth-child(11) {
   position: absolute;
@@ -475,10 +621,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 47vh;
-  left: 76vw;
-  animation: meteor 4157ms linear infinite;
-  animation-delay: 1116ms;
+  top: 8vh;
+  left: 59vw;
+  animation: meteor 4228ms linear infinite;
+  animation-delay: 1901ms;
 }
 #home .meteor-shower .meteor:nth-child(12) {
   position: absolute;
@@ -486,10 +632,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 49vh;
-  left: 53vw;
-  animation: meteor 6844ms linear infinite;
-  animation-delay: 1842ms;
+  top: 17vh;
+  left: 43vw;
+  animation: meteor 3118ms linear infinite;
+  animation-delay: 1870ms;
 }
 #home .meteor-shower .meteor:nth-child(13) {
   position: absolute;
@@ -497,10 +643,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 74vh;
-  left: 41vw;
-  animation: meteor 5429ms linear infinite;
-  animation-delay: 1904ms;
+  top: 18vh;
+  left: 48vw;
+  animation: meteor 6841ms linear infinite;
+  animation-delay: 4328ms;
 }
 #home .meteor-shower .meteor:nth-child(14) {
   position: absolute;
@@ -508,10 +654,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 39vh;
-  left: 73vw;
-  animation: meteor 4212ms linear infinite;
-  animation-delay: 1267ms;
+  top: 12vh;
+  left: 74vw;
+  animation: meteor 6431ms linear infinite;
+  animation-delay: 1280ms;
 }
 #home .meteor-shower .meteor:nth-child(15) {
   position: absolute;
@@ -519,10 +665,10 @@ main > section header.custom h2 {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 20vh;
-  left: 3vw;
-  animation: meteor 3900ms linear infinite;
-  animation-delay: 577ms;
+  top: 27vh;
+  left: 25vw;
+  animation: meteor 4732ms linear infinite;
+  animation-delay: 1581ms;
 }
 
 @keyframes meteor {
@@ -807,8 +953,147 @@ main > section header.custom h2 {
   padding-left: 34px;
 }
 
-#work {
-  background: #f00;
+#my_work.blur {
+  filter: blur(2px);
+}
+#my_work .filters {
+  text-align: center;
+  margin-top: 81px;
+  margin-bottom: 55px;
+}
+#my_work .filters button {
+  background: transparent;
+  color: #808185;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-bottom: 16px;
+}
+#my_work .filters button.active {
+  color: #fff;
+  background: #1e1e20;
+  border-radius: 8px;
+}
+#my_work .work-items .item {
+  margin-bottom: 24px;
+}
+#my_work .work-items .item .wrap {
+  position: relative;
+  overflow: hidden;
+}
+#my_work .work-items .item .wrap:hover:before {
+  transform: rotate(0deg);
+}
+#my_work .work-items .item .wrap:hover:after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+#my_work .work-items .item .wrap:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(101, 141, 242, 0.6);
+  border-radius: 8px;
+  z-index: 1;
+  cursor: pointer;
+  transform: rotate(-100deg);
+  transform-origin: top left;
+  transition: all 0.3s;
+}
+#my_work .work-items .item .wrap:after {
+  content: "View";
+  position: absolute;
+  width: 96%;
+  height: 95%;
+  background: rgba(21, 21, 22, 0.8);
+  border-radius: 8px;
+  transform-origin: bottom left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(100deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  letter-spacing: 3px;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#my_work .work-items .item .wrap img {
+  width: 100%;
+  opacity: 0.5;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal#workModal .modal-dialog {
+  max-width: 863px;
+}
+.modal#workModal .modal-dialog .modal-content {
+  background: #1e1e20;
+  padding: 32px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+  position: static;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .modal-close-button {
+  position: absolute;
+  right: -23px;
+  top: -23px;
+  background: #151516;
+  font-size: 22px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .modal-close-button:hover {
+  background: #0b2c80;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body img {
+  width: 100%;
+  height: 532px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .left {
+  padding-left: 0;
+  padding-right: 32px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .left h2 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .left p {
+  color: #b6b7ba;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right {
+  padding-right: 0;
+  padding-left: 32px;
+  padding-top: 80px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right i {
+  font-size: 18px;
+  margin-right: 2px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right .value {
+  color: #b6b7ba;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right .project-link {
+  margin-top: 32px;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right .project-link a,
+.modal#workModal .modal-dialog .modal-content .modal-body .right .project-link i {
+  color: #658df2;
+  text-decoration: none;
+}
+.modal#workModal .modal-dialog .modal-content .modal-body .right .project-link a:hover {
+  text-decoration: underline;
 }
 
 #contact {
@@ -834,6 +1119,10 @@ main > section header.custom h2 {
     height: unset;
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+  .modal#workModal .modal-dialog .modal-content .modal-body .modal-close-button {
+    right: 10px;
+    top: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -921,5 +1210,15 @@ main > section header.custom h2 {
   #my_resume .experience {
     padding-right: 12px;
     padding-left: 12px;
+  }
+  .modal#workModal .modal-dialog .modal-content .modal-body img {
+    height: unset;
+  }
+  .modal#workModal .modal-dialog .modal-content .modal-body .left {
+    padding-right: 0;
+  }
+  .modal#workModal .modal-dialog .modal-content .modal-body .right {
+    padding-left: 0;
+    padding-top: 32px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -17,5 +17,17 @@ document
   .querySelector("#sidebar .toggle-sidebar")
   .addEventListener("click", function () {
     document.querySelector("#sidebar").classList.toggle("open");
-    
   });
+
+var typed = new Typed(".field h2", {
+  strings: ["Back-end Developer", "Full Stack Developer"],
+  loop: true,
+  typeSpeed: 70,
+  backSpeed: 10,
+});
+
+for (let i = 1; i <= 15; i++) {
+  let meteor = document.createElement("span");
+  meteor.classList = "meteor";
+  document.querySelector("#home .meteor-shower").append(meteor);
+}

@@ -1,15 +1,16 @@
-let navLinks = document.querySelectorAll("nav ul li a");
+let navLinks = document.querySelectorAll("a.inner-link");
 
 navLinks.forEach((item) => {
-  console.log(item);
   item.addEventListener("click", function () {
+    console.log(item);
     document.querySelector("nav ul li a.active").classList.remove("active");
-    item.classList.add("active");
+    document
+      .querySelector(`nav ul li a[href='${item.getAttribute("href")}']`)
+      .classList.add("active");
     document.querySelector("main > section.active").classList.remove("active");
     document
       .querySelector(`main > section${item.getAttribute("href")}`)
       .classList.add("active");
-    console.log(`main > section${item.getAttribute("href")}`);
   });
 });
 
@@ -19,12 +20,14 @@ document
     document.querySelector("#sidebar").classList.toggle("open");
   });
 
-var typed = new Typed(".field h2", {
-  strings: ["Back-end Developer", "Full Stack Developer"],
+var options = {
+  strings: ["Java Back-end developer", "Java Full Stack developer"],
   loop: true,
   typeSpeed: 70,
   backSpeed: 10,
-});
+};
+
+new Typed(".field h2", options);
 
 for (let i = 1; i <= 15; i++) {
   let meteor = document.createElement("span");

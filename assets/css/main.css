@@ -12,7 +12,13 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
@@ -107,11 +113,33 @@ main > section.active {
 }
 main > section header.has-bg {
   position: relative;
+  display: inline-flex;
 }
 main > section header.has-bg img {
   position: absolute;
   top: 15px;
   left: -72px;
+}
+main > section header.custom {
+  position: relative;
+  text-align: center;
+  margin-bottom: 42px;
+}
+main > section header.custom:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #1e1e20;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+main > section header.custom h2 {
+  display: inline-block;
+  padding: 0 24px;
+  background: #151516;
 }
 
 #sidebar {
@@ -337,10 +365,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 2vh;
-  left: 18vw;
-  animation: meteor 6165ms linear infinite;
-  animation-delay: 3104ms;
+  top: 29vh;
+  left: 14vw;
+  animation: meteor 6475ms linear infinite;
+  animation-delay: 70ms;
 }
 #home .meteor-shower .meteor:nth-child(2) {
   position: absolute;
@@ -348,10 +376,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 38vh;
-  left: 62vw;
-  animation: meteor 3051ms linear infinite;
-  animation-delay: 3149ms;
+  top: 34vh;
+  left: 51vw;
+  animation: meteor 5125ms linear infinite;
+  animation-delay: 1191ms;
 }
 #home .meteor-shower .meteor:nth-child(3) {
   position: absolute;
@@ -359,10 +387,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 35vh;
-  left: 80vw;
-  animation: meteor 4985ms linear infinite;
-  animation-delay: 1998ms;
+  top: 14vh;
+  left: 28vw;
+  animation: meteor 6614ms linear infinite;
+  animation-delay: 678ms;
 }
 #home .meteor-shower .meteor:nth-child(4) {
   position: absolute;
@@ -370,10 +398,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 30vh;
-  left: 68vw;
-  animation: meteor 7402ms linear infinite;
-  animation-delay: 1523ms;
+  top: 50vh;
+  left: 75vw;
+  animation: meteor 7982ms linear infinite;
+  animation-delay: 3441ms;
 }
 #home .meteor-shower .meteor:nth-child(5) {
   position: absolute;
@@ -381,10 +409,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 12vh;
-  left: 48vw;
-  animation: meteor 3899ms linear infinite;
-  animation-delay: 2627ms;
+  top: 44vh;
+  left: 14vw;
+  animation: meteor 5812ms linear infinite;
+  animation-delay: 3920ms;
 }
 #home .meteor-shower .meteor:nth-child(6) {
   position: absolute;
@@ -392,10 +420,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 51vh;
+  top: 76vh;
   left: 11vw;
-  animation: meteor 4727ms linear infinite;
-  animation-delay: 1555ms;
+  animation: meteor 4752ms linear infinite;
+  animation-delay: 1106ms;
 }
 #home .meteor-shower .meteor:nth-child(7) {
   position: absolute;
@@ -403,10 +431,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 61vh;
-  left: 64vw;
-  animation: meteor 7699ms linear infinite;
-  animation-delay: 1512ms;
+  top: 51vh;
+  left: 67vw;
+  animation: meteor 3705ms linear infinite;
+  animation-delay: 2670ms;
 }
 #home .meteor-shower .meteor:nth-child(8) {
   position: absolute;
@@ -414,10 +442,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 33vh;
-  left: 59vw;
-  animation: meteor 6484ms linear infinite;
-  animation-delay: 4911ms;
+  top: 64vh;
+  left: 7vw;
+  animation: meteor 5873ms linear infinite;
+  animation-delay: 4850ms;
 }
 #home .meteor-shower .meteor:nth-child(9) {
   position: absolute;
@@ -425,10 +453,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 55vh;
-  left: 24vw;
-  animation: meteor 6433ms linear infinite;
-  animation-delay: 2807ms;
+  top: 19vh;
+  left: 49vw;
+  animation: meteor 7179ms linear infinite;
+  animation-delay: 2934ms;
 }
 #home .meteor-shower .meteor:nth-child(10) {
   position: absolute;
@@ -436,10 +464,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 61vh;
-  left: 37vw;
-  animation: meteor 7260ms linear infinite;
-  animation-delay: 524ms;
+  top: 63vh;
+  left: 49vw;
+  animation: meteor 6090ms linear infinite;
+  animation-delay: 54ms;
 }
 #home .meteor-shower .meteor:nth-child(11) {
   position: absolute;
@@ -447,10 +475,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 26vh;
+  top: 47vh;
   left: 76vw;
-  animation: meteor 6075ms linear infinite;
-  animation-delay: 4845ms;
+  animation: meteor 4157ms linear infinite;
+  animation-delay: 1116ms;
 }
 #home .meteor-shower .meteor:nth-child(12) {
   position: absolute;
@@ -458,10 +486,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 37vh;
-  left: 5vw;
-  animation: meteor 5397ms linear infinite;
-  animation-delay: 105ms;
+  top: 49vh;
+  left: 53vw;
+  animation: meteor 6844ms linear infinite;
+  animation-delay: 1842ms;
 }
 #home .meteor-shower .meteor:nth-child(13) {
   position: absolute;
@@ -469,10 +497,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 67vh;
-  left: 75vw;
-  animation: meteor 6445ms linear infinite;
-  animation-delay: 686ms;
+  top: 74vh;
+  left: 41vw;
+  animation: meteor 5429ms linear infinite;
+  animation-delay: 1904ms;
 }
 #home .meteor-shower .meteor:nth-child(14) {
   position: absolute;
@@ -480,10 +508,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 35vh;
-  left: 28vw;
-  animation: meteor 7141ms linear infinite;
-  animation-delay: 3931ms;
+  top: 39vh;
+  left: 73vw;
+  animation: meteor 4212ms linear infinite;
+  animation-delay: 1267ms;
 }
 #home .meteor-shower .meteor:nth-child(15) {
   position: absolute;
@@ -491,10 +519,10 @@ main > section header.has-bg img {
   width: 60px;
   height: 49px;
   opacity: 0;
-  top: 57vh;
-  left: 8vw;
-  animation: meteor 6957ms linear infinite;
-  animation-delay: 3778ms;
+  top: 20vh;
+  left: 3vw;
+  animation: meteor 3900ms linear infinite;
+  animation-delay: 577ms;
 }
 
 @keyframes meteor {
@@ -546,27 +574,6 @@ main > section header.has-bg img {
 #about_me .hero .info .buttons a:first-child {
   margin-right: 24px;
 }
-#about_me header.custom {
-  position: relative;
-  text-align: center;
-  margin-bottom: 42px;
-}
-#about_me header.custom:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #1e1e20;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
-}
-#about_me header.custom h2 {
-  display: inline-block;
-  padding: 0 24px;
-  background: #151516;
-}
 #about_me .rate {
   display: flex;
 }
@@ -585,7 +592,7 @@ main > section header.has-bg img {
   width: 15px;
   height: 15px;
   border-radius: 4px;
-  background: #1e1e20;
+  background: #658df2;
   transform: rotate(40deg);
 }
 #about_me .rate span:after {
@@ -594,11 +601,8 @@ main > section header.has-bg img {
   width: 15px;
   height: 15px;
   border-radius: 4px;
-  background: #1e1e20;
-  transform: rotate(50deg);
-}
-#about_me .rate span.fill:before, #about_me .rate span.fill:after {
   background: #658df2;
+  transform: rotate(50deg);
 }
 #about_me .languages-skills {
   margin-top: 126px;
@@ -695,9 +699,112 @@ main > section header.has-bg img {
   transform: scale(1.1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
+#my_resume {
+  padding-bottom: 115px;
+  background-image: url(../images/bg-shape.png);
+  background-repeat: no-repeat;
+  background-position: 40vw 374px;
+}
+#my_resume header.has-bg {
+  margin-bottom: 64px;
+}
+#my_resume .items .item {
+  display: flex;
+}
+#my_resume .items .item:not(:last-child) {
+  margin-bottom: 42px;
+}
+#my_resume .items .item.last .icon i,
+#my_resume .items .item.last .box .title {
+  color: #658df2;
+}
+#my_resume .items .item:hover .icon,
+#my_resume .items .item:hover .icon:before {
+  background: rgba(11, 44, 128, 0.4);
+}
+#my_resume .items .item:hover .box {
+  background: transparent;
+}
+#my_resume .items .item:hover .box:before {
+  border-right-color: rgba(11, 44, 128, 0.4);
+}
+#my_resume .items .item:hover .box:after {
+  width: 100%;
+}
+#my_resume .items .item .icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.0509803922);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-right: 46px;
+  margin-top: 23px;
+  transition: all 0.3s;
+}
+#my_resume .items .item .icon:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 126px;
+  background: #1e1e20;
+  top: 82px;
+  transition: all 0.3s;
+}
+#my_resume .items .item .box {
+  position: relative;
+  padding: 32px;
+  background: rgba(30, 30, 32, 0.75);
+  border-radius: 8px;
+  text-align: left;
+  z-index: 1;
+  flex-grow: 1;
+  transition: all 0.3s;
+}
+#my_resume .items .item .box:before {
+  content: "";
+  position: absolute;
+  border-right: 9px solid rgba(30, 30, 32, 0.75);
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  left: -9px;
+  top: 36px;
+}
+#my_resume .items .item .box:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 8px;
+  background: rgba(11, 44, 128, 0.4);
+  z-index: -1;
+  transition: all 0.3s;
+}
+#my_resume .items .item .box .year {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+#my_resume .items .item .box .title {
+  margin-bottom: 16px;
+}
+#my_resume .items .item .box p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #b6b7ba;
+  max-width: 345px;
+}
+#my_resume .education {
+  padding-right: 34px;
+}
+#my_resume .experience {
+  padding-left: 34px;
 }
 
 #work {
@@ -716,6 +823,9 @@ main > section header.has-bg img {
 @media (max-width: 1199px) {
   #about_me .languages-skills .languages-key-skills {
     padding-right: 12px;
+  }
+  #my_resume .experience {
+    margin-top: 100px;
   }
 }
 @media (max-width: 991px) {
@@ -788,5 +898,28 @@ main > section header.has-bg img {
   }
   #about_me .hero .info .buttons a:first-child {
     margin-bottom: 16px;
+  }
+  #my_resume .items .item {
+    position: relative;
+  }
+  #my_resume .items .item .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -23px;
+    z-index: 2;
+    margin-top: 0;
+    background: rgba(30, 30, 32, 0.75);
+  }
+  #my_resume .items .item .icon:before {
+    display: none;
+  }
+  #my_resume .items .item .box:before {
+    display: none;
+  }
+  #my_resume .education,
+  #my_resume .experience {
+    padding-right: 12px;
+    padding-left: 12px;
   }
 }/*# sourceMappingURL=main.css.map */

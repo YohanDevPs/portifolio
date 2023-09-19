@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifolio Website</title>
     <link
@@ -27,28 +28,28 @@
       <nav>
         <ul>
           <li>
-            <a href="#home" class="active">
+            <a href="#home" class="inner-link">
               <i class="las la-home"></i>
               <span>Home</span>
             </a>
             <span>Home</span>
           </li>
           <li>
-            <a href="#about_me">
+            <a href="#about_me" class="inner-link">
               <i class="las la-address-card"></i>
               <span>About Me</span>
             </a>
             <span>About Me</span>
           </li>
           <li>
-            <a href="#my_resume">
+            <a href="#my_resume" class="active inner-link">
               <i class="las la-file"></i>
               <span>My Resume</span>
             </a>
             <span>My Resume</span>
           </li>
           <li>
-            <a href="#my_work">
+            <a href="#my_work" class="inner-link">
               <i class="las la-briefcase"></i>
               <span>My Work</span>
             </a>
@@ -80,7 +81,7 @@
                 src="assets/images/fotocircular.png"
                 alt="person circle"
               />
-              <h1><span>I'm</span> Yohan,</h1>
+              <h1><span>I’m</span> Yohan,</h1>
               <div class="field">
                 <h2></h2>
               </div>
@@ -122,7 +123,7 @@
           </div>
         </div>
       </section>
-      <section id="about_me" class="active">
+      <section id="about_me">
         <div class="container">
           <div class="row hero">
             <div class="col-xxl-6 col-lg-4 image">
@@ -354,7 +355,89 @@
           </div>
         </div>
       </section>
-      <section id="my_resume">Resume</section>
+      <section id="my_resume" class="active">
+        <div class="text-center">
+          <header class="has-bg">
+            <img src="assets/images/h1-bg.png" alt="h1 bg" />
+            <h1>My Resume</h1>
+          </header>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-6 education">
+                <header class="custom">
+                  <h2>Education</h2>
+                </header>
+                <div class="items">
+                  <div class="item last">
+                    <div class="icon">
+                      <i class="las la-university"></i>
+                    </div>
+                    <div class="box">
+                      <span class="year">Jul 2023 - Present</span>
+                      <h2 class="title">
+                        Postgraduate in Software Engineering with Java
+                      </h2>
+                      <p>
+                        Academic program focused on advanced software
+                        development using the Java language
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="icon">
+                      <i class="las la-university"></i>
+                    </div>
+                    <div class="box">
+                      <span class="year">Ago 2020 - Ago 2023</span>
+                      <h2 class="title">Analysis and systems development</h2>
+                      <p>
+                        Initial training to design, develop and analyze software
+                        systems.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 experience">
+                <header class="custom">
+                  <h2>Experience</h2>
+                </header>
+                <div class="items">
+                  <div class="item last">
+                    <div class="icon">
+                      <i class="las la-briefcase"></i>
+                    </div>
+                    <div class="box">
+                      <span class="year">Jan 2023 - Present</span>
+                      <h2 class="title">Freelance Developer</h2>
+                      <p>
+                        Worked on API integrations, authentications and web
+                        services
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="icon">
+                      <i class="las la-briefcase"></i>
+                    </div>
+                    <div class="box">
+                      <span class="year">Mar 2022 - Dec 2022</span>
+                      <h2 class="title">
+                        Full Stack Software Engineer Internship
+                      </h2>
+                      <p>
+                        Analyze and develop low-complexity bug solutions,
+                        manipulate reports, endpoints and participate in the
+                        Sprint cycle
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="my_work">Work</section>
       <section id="contact_me">Contact</section>
     </main>

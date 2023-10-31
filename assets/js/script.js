@@ -89,6 +89,16 @@ workElements.forEach((item) => {
       .querySelector("#workModal .modal-body .project-link a")
       .setAttribute("target", "_blank");
 
+      document.querySelectorAll('.socials ul li a').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();  
+    
+            var url = this.getAttribute('href');
+    
+            window.open(url, '_blank');
+        });
+    });
+
     workModal.show();
   });
 });

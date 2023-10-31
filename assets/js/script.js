@@ -21,7 +21,7 @@ document
   });
 
 var options = {
-  strings: ["Java Back-end developer", "Java Full Stack developer"],
+  strings: ["Full Stack developer", "Back-end Developer", "Front-end Developer"],
   loop: true,
   typeSpeed: 70,
   backSpeed: 10,
@@ -80,9 +80,14 @@ workElements.forEach((item) => {
     ).innerText = item.getAttribute("data-completed");
     document.querySelector("#workModal .modal-body .skills .value").innerText =
       item.getAttribute("data-skills");
-    document
+      
+      document
       .querySelector("#workModal .modal-body .project-link a")
       .setAttribute("href", item.getAttribute("data-project-link"));
+
+    document
+      .querySelector("#workModal .modal-body .project-link a")
+      .setAttribute("target", "_blank");
 
     workModal.show();
   });
